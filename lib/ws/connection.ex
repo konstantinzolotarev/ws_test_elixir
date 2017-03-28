@@ -21,7 +21,7 @@ defmodule Ws.Connection do
     GenServer.cast(pid, :send_something)
   end
 
-  def ws_send(socket, msg) do
+  defp ws_send(socket, msg) do
     socket |> Socket.Web.send!(msg)
   end
 
